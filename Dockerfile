@@ -3,9 +3,9 @@ COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 CMD [ "php", "./index.php" ]
 
-FROM php:7
-RUN docker-php-ext-install mysqli
 
-FROM php:7.3.0-apache
-COPY . /var/www/html
+
+FROM php:7.0-fpm
+RUN docker-php-ext-install pdo pdo_mysql php-mysqli
+RUN docker-php-ext-enable php-mysqli 
 EXPOSE 80
