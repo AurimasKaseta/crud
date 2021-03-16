@@ -8,6 +8,4 @@ RUN docker-php-ext-install mysqli
 
 FROM php:7.2-apache
 COPY . /var/www/html/
-FROM php:7.3-apache
-COPY php/ /var/www/html
 EXPOSE 80
