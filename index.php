@@ -1,7 +1,7 @@
 <?php
-require('component.php');
-require('operation.php');
-
+define('__ROOT__', dirname(dirname(__FILE__)));
+require_once("__ROOT__./Php/component.php");
+require_once ("__ROOT__./Php/operation.php");
 ?>
 <!doctype html>
 <html lang="en">
