@@ -16,7 +16,7 @@ function Createdb()
 // Create database
     $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
     if (mysqli_query($con,$sql)) {
-        $con = new mysqli($servername, $username, $password, $dbname);
+        $con = new \mysqli($servername, $username, $password, $dbname);
 
         $sql="
             CREATE TABLE IF NOT EXISTS books(
