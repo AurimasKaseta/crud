@@ -39,6 +39,7 @@ services:
       - "3306:3306"
     environment:
       MYSQL_DATABASE: bookstore
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     networks:
